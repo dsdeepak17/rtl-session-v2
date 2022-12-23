@@ -1,38 +1,110 @@
+:root {
+  --margin: 10px 7px;
+  --padding: 5px 7px;
+  --border-radius: 3px;
+  --light-color: #ddd;
+  --dark-color: #333;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+
 .App {
+  max-width: 640px;
+  margin: 0 auto;
+  height: 100vh;
+}
+.text-center{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-right{
+  text-align: right;
+}
+.text-left{
+  text-align: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input, button {
+  margin: var(--margin);
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+  outline: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button{
+ border: none;
+ color: var(--light-color);
+ background: var(--dark-color);
+ cursor: pointer;
+}
+
+button:active {
+  transform: scale(1.035);
+}
+
+.todo-form {
+  margin: 20px 0px;
+}
+
+.todo-input {
+  width: 530px;
+}
+
+.todo-item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-text {
+  font-size: 18px;
+  margin: var(--margin);
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--dark-color);
+  width: 90%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.complete{  
+  border: 1px solid tomato;
+  color: tomato;
+  text-decoration: line-through;
+}
+
+.todo-delete {
+  width: 4%;
+  margin: auto;
+}
+
+.todo-list {
+  width: 620px;
+  height: 60vh;
+  overflow-y: scroll;
+  border: 3px solid var(--dark-color);
+  border-radius: var(--border-radius);
+}
+
+.todo-status {
+  width: 620px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 3px solid var(--dark-color);
+  margin: 10px 0px;
+  padding: var(--padding);
+  border-radius: (--border-radius);
+}
+
+@media (max-width: 768px) {
+  .App{
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+  .todo-list, .todo-status {
+    width: 95%;
+  }
+  .todo-input {
+    width: 65%;
   }
 }
