@@ -1,6 +1,6 @@
 import './App.css';
-import Todo from './components/Todo/Todo';
-import Followers from './components/Followers/Followers';
+import Todo from './pages/TodoPage';
+import Followers from './pages/FollowersPage';
 import { Routes, Route } from 'react-router-dom'
 
 function App() {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import TodoInput from './TodoInput'
-import TodoList from './TodoList'
-import TodoStatus from './TodoStatus'
+import TodoInput from '../components/Todo/TodoInput'
+import TodoList from '../components/Todo/TodoList'
+import TodoStatus from '../components/Todo/TodoStatus'
 
 
 function Todo() {
