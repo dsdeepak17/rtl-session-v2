@@ -1,43 +1,58 @@
 :root {
-  --margin: 10px 7px;
-  --padding: 5px 7px;
-  --border-radius: 3px;
-  --light-color: #ddd;
-  --dark-color: #333;
+	--margin: 10px 7px;
+	--padding: 5px 15px;
+	--border-radius: 25px;
+	--light-color: #ddd;
+	--dark-color: #17236a;
+  --background: #234E70;
+	--font-size: 20px;
 }
 
 ::-webkit-scrollbar {
-  width: 0;
+	width: 0;
 }
-
 
 .App {
-  max-width: 640px;
-  margin: 0 auto;
-  height: 100vh;
+	max-width: 640px;
+	margin: 0 auto;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
-.text-center{
-  text-align: center;
+.text-center {
+	text-align: center;
 }
-.text-right{
-  text-align: right;
+.text-right {
+	text-align: right;
 }
-.text-left{
-  text-align: left;
-}
-
-input, button {
-  margin: var(--margin);
-  padding: var(--padding);
-  border-radius: var(--border-radius);
-  outline: none;
+.text-left {
+	text-align: left;
 }
 
-button{
- border: none;
- color: var(--light-color);
- background: var(--dark-color);
- cursor: pointer;
+.title-text {
+	font-size: var(--font-size);
+	background: var(--background);
+	color: var(--light-color);
+	padding: var(--padding);
+	border-radius: var(--border-radius);
+}
+
+input,
+button {
+	margin: var(--margin);
+	padding: var(--padding);
+	border-radius: var(--border-radius);
+	outline: none;
+	font-size: var(--font-size);
+}
+
+button {
+	border: none;
+	color: var(--light-color);
+	background: var(--background);
+	cursor: pointer;
+  transition: all 0.3s;
 }
 
 button:active {
@@ -49,62 +64,76 @@ button:active {
 }
 
 .todo-input {
-  width: 530px;
+  width: 490px;
 }
 
 .todo-item {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 .todo-text {
-  font-size: 18px;
-  margin: var(--margin);
-  padding: var(--padding);
-  border-radius: var(--border-radius);
-  border: 1px solid var(--dark-color);
-  width: 90%;
+  font-size: 1.3rem;
+	margin: var(--margin);
+	padding: var(--padding);
+	border-radius: var(--border-radius);
+	border: 1px solid var(--dark-color);
+	width: 90%;
 }
 
-.complete{  
-  border: 1px solid tomato;
-  color: tomato;
-  text-decoration: line-through;
+.complete {
+  border: 1px solid green;
+	color: green;
+	text-decoration: line-through;
 }
 
 .todo-delete {
   width: 4%;
-  margin: auto;
+	margin: auto;
+  transition: all 1s;
+}
+
+.todo-delete:active {
+  width: 5.5%;
 }
 
 .todo-list {
-  width: 620px;
-  height: 60vh;
-  overflow-y: scroll;
-  border: 3px solid var(--dark-color);
-  border-radius: var(--border-radius);
+	width: 620px;
+	height: 60vh;
+	overflow-y: scroll;
+	border: 3px solid var(--dark-color);
+	border-radius: var(--border-radius);
+  transition: all ease-in;
 }
 
 .todo-status {
-  width: 620px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border: 3px solid var(--dark-color);
-  margin: 10px 0px;
-  padding: var(--padding);
-  border-radius: (--border-radius);
+	width: 620px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border: 3px solid var(--dark-color);
+	margin: 10px 0px;
+	padding: var(--padding);
+	border-radius: var(--border-radius);
+	font-size: var(--font-size);
 }
 
 @media (max-width: 768px) {
-  .App{
-    width: 90%;
-  }
-  .todo-list, .todo-status {
-    width: 95%;
-  }
-  .todo-input {
-    width: 65%;
-  }
+	.App {
+		width: 90%;
+	}
+	.todo-list,
+	.todo-status {
+		width: 95%;
+	}
+	.todo-input {
+		width: 62%;
+	}
+}
+
+@media (max-width: 420px) {
+	.todo-input {
+		width: 57%;
+	}
 }

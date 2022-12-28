@@ -19,24 +19,13 @@ function Todo() {
   }
 
   const toggleTodoCompletion = (toggleId) => {
-    // console.log(id)
-    const editedTodos = todoList.map(({ id, text, completed }) => {
-      if (id === toggleId) {
-        return {
-          id,
-          text,
-          completed: !completed
-        }
-      }
-      return {
-        id, text, completed
-      }
-    })
-    setTodoList(editedTodos)
+    const newTodos = [...todoList];
+    const id = todoList.findIndex(todo => todo.id === toggleId)
+    newTodos[id].completed = !todoList[id].completed
+    setTodoList(newTodos)
   }
 
   const handleTodoDeletion = deletionId => {
-    // console.log({ id });
     const filteredTodos = todoList.filter(({ id }) => id !== deletionId)
     setTodoList(filteredTodos)
   }

@@ -4,7 +4,7 @@ import DeleteIcon from '../../assets/icons/delete.svg'
 function TodoList({ todoList, toggleTodoCompletion, handleTodoDeletion }) {
   return (
     <div className='todo-list' data-testid="todo-list">
-      <h2 className='text-center'>Todo List</h2>
+      <h2 className='text-center title-text'>Todo List</h2>
       {todoList?.map(({ id, text, completed }) =>
         <div key={id} className="todo-item">
           <div

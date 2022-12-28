@@ -1,13 +1,15 @@
-import Todo from './components/Todo/Todo';
 import './App.css';
+import Todo from './components/Todo/Todo';
+import Followers from './components/Followers/Followers';
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <h3 className='text-center'>
-        React Todo App Testing
-      </h3>
-      <Todo />
+    <div className='App'>
+      <Routes>
+        <Route strict path="/" element={<Todo />} />
+        <Route strict exact path="/followers" element={<Followers />} />
+      </Routes>
     </div>
   );
 }
