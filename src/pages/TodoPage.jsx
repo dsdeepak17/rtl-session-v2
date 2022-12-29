@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import TodoInput from '../components/Todo/TodoInput'
 import TodoList from '../components/Todo/TodoList'
 import TodoStatus from '../components/Todo/TodoStatus'
 
 
 function Todo() {
-  const [todoList, setTodoList] = useState([])
-
-  useEffect(() => {
-    console.log(todoList)
-  }, [todoList])
+  const [todoList, setTodoList] = useState([]);
 
   const handleAddTodo = (newTodo) => {
     setTodoList(prevTodos => ([
@@ -31,7 +27,7 @@ function Todo() {
   }
 
   return (
-    <div className='todo-container'>
+    <div className='todo-container' data-testid="todo-container">
       <TodoInput handleAddTodo={handleAddTodo} />
       <TodoList
         todoList={todoList}

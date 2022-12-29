@@ -13,14 +13,14 @@ function TodoInput({ handleAddTodo }) {
     const newTodo = {
       id: Math.random(),
       text: todo,
-      completed: false,
+      isComplete: false,
     }
     handleAddTodo(newTodo)
     addTodo('')
   }  
 
   return (
-    <form onSubmit={onSubmit} className='todo-form' >
+    <form onSubmit={onSubmit} className='todo-form' data-testid='todo-input-form'>
       <input value={todo} onChange={handleOnChange} className="todo-input" data-testid="todo-input" placeholder='Add todo here...' />
       <button className='todo-input-btn' data-testid="todo-input-btn" type="submit" disabled={isDisabled}>Add Todo</button>
     </form>
