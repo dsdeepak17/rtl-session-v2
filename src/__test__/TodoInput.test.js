@@ -1,12 +1,12 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import AddInput from "../components/Todo/TodoInput"
+import TodoInput from "../components/Todo/TodoInput"
 
 const mockedAddTodo = jest.fn();
 
 describe("AddInput", () => {
   it('should render input element', () => {
     render(
-      <AddInput
+      <TodoInput
         handleAddTodo={mockedAddTodo}
       />
     );
@@ -16,7 +16,7 @@ describe("AddInput", () => {
 
   it('should be able to type into input', () => {
     render(
-      <AddInput
+      <TodoInput
         handleAddTodo={mockedAddTodo}
       />
     );
@@ -28,7 +28,7 @@ describe("AddInput", () => {
 
   it('should be able to type into input and click Add Todo button', () => {
     render(
-      <AddInput
+      <TodoInput
         handleAddTodo={mockedAddTodo}
       />
     );
@@ -42,7 +42,7 @@ describe("AddInput", () => {
 
   it('should have empty input when add button is clicked', () => {
     render(
-      <AddInput
+      <TodoInput
         handleAddTodo={mockedAddTodo}
       />
     );
@@ -55,7 +55,7 @@ describe("AddInput", () => {
 
   it('should keep the todo-input button disabled unless the todo-input has some value', () => {
     render(
-      <AddInput
+      <TodoInput
         handleAddTodo={mockedAddTodo}
       />
     );

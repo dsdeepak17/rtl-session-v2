@@ -1,7 +1,7 @@
 :root {
 	--margin: 10px 7px;
 	--padding: 5px 15px;
-	--border-radius: 25px;
+	--border-radius: 50px;
 	--light-color: #ddd;
 	--dark-color: #17236a;
   --background: #234E70;
@@ -10,6 +10,33 @@
 
 ::-webkit-scrollbar {
 	width: 0;
+}
+
+.header {
+	background: var(--background);
+	color: var(--light-color);
+	margin: var(--margin);
+	padding: var(--padding);
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav > a {
+	color: var(--light-color);
+	padding: var(--padding);
+	margin: var(--margin);
+	text-decoration: none;
+	font-size: var(--font-size);
+}
+
+.footer {
+	font-size: x-small;
+	background: var(--background);
+	color: var(--light-color);
+	width: 100vw;
+	text-align: center;
+	border-radius: var(--border-radius);
 }
 
 .App {
@@ -57,14 +84,23 @@ button {
 
 button:active {
   transform: scale(1.035);
+	background: var(--dark-color);
+}
+
+.todo-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .todo-form {
   margin: 20px 0px;
+	display: flex;
+	justify-content: center;
 }
 
 .todo-input {
-  width: 490px;
+  width: 460px;
 }
 
 .todo-item {
@@ -105,6 +141,7 @@ button:active {
 	border: 3px solid var(--dark-color);
 	border-radius: var(--border-radius);
   transition: all ease-in;
+	margin: auto 0;
 }
 
 .todo-status {
@@ -116,7 +153,28 @@ button:active {
 	margin: 10px 0px;
 	padding: var(--padding);
 	border-radius: var(--border-radius);
-	font-size: var(--font-size);
+}
+
+.follower {
+	height: 5.5rem;
+	width: 32rem;
+	border: 3px solid var(--dark-color);
+	margin: var(--margin);
+	padding: 5px;
+	border-radius: var(--border-radius);
+	display: flex;
+}
+
+.follower-detail {
+	margin-left: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.follower-image {
+	height: 4.5rem;
+	border-radius: var(--border-radius);
+	border: 1px solid var(--dark-color);
 }
 
 @media (max-width: 768px) {
@@ -128,7 +186,10 @@ button:active {
 		width: 95%;
 	}
 	.todo-input {
-		width: 62%;
+		width:56%;
+	}
+	.follower {
+		width: 24rem;
 	}
 }
 
@@ -136,4 +197,9 @@ button:active {
 	.todo-input {
 		width: 57%;
 	}
+	.follower{
+		width: 20rem;
+	}
 }
+
+

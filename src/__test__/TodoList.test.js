@@ -26,7 +26,7 @@ describe('Tests the TodoList Component', () => {
       handleTodoDeletion={mockedDeletion}
     />)
     const todoText = screen.getByText('Wash Car');
-    const todoDelete = screen.getByTestId('todo-delete')
+    const todoDelete = screen.getByTestId('delete Wash Car')
     expect(todoText).toBeInTheDocument()
     expect(todoDelete).toBeInTheDocument()
   })
@@ -38,7 +38,7 @@ describe('Tests the TodoList Component', () => {
       toggleTodoCompletion={mockedToggleCompletion}
       handleTodoDeletion={mockedDeletion}
     />)
-    const todoDeleteButton = screen.getByTestId('todo-delete');
+    const todoDeleteButton = screen.getByTestId('delete Wash Car');
     const todoItem = screen.getByTestId('todo-item')
     expect(todoItem).toBeInTheDocument();
     fireEvent.click(todoDeleteButton);

@@ -17,7 +17,7 @@ function Todo() {
   const toggleTodoCompletion = (toggleId) => {
     const newTodos = [...todoList];
     const id = todoList.findIndex(todo => todo.id === toggleId)
-    newTodos[id].completed = !todoList[id].completed
+    newTodos[id].isComplete = !todoList[id].isComplete
     setTodoList(newTodos)
   }
 

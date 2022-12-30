@@ -17,7 +17,7 @@ function TodoList({ todoList, toggleTodoCompletion, handleTodoDeletion }) {
           <img
             src={DeleteIcon}
             className="todo-delete"
-            data-testid="todo-delete"
+            data-testid={`delete ${text}`}
             alt="delete-icon"
             onClick={() => handleTodoDeletion(id)} />
         </div>
