@@ -15,7 +15,6 @@
 .header {
 	background: var(--background);
 	color: var(--light-color);
-	margin: var(--margin);
 	padding: var(--padding);
 	width: 100%;
 	display: flex;
@@ -39,10 +38,9 @@ nav > a {
 	border-radius: var(--border-radius);
 }
 
-.App {
+.app-container {
 	max-width: 640px;
 	margin: 0 auto;
-	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
