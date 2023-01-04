@@ -163,18 +163,28 @@ button:active {
 	padding: 5px;
 	border-radius: var(--border-radius);
 	display: flex;
+	background-color: var(--background);
+	color: var(--light-color);
+	transition: all .2s ease-in-out;
+}
+
+.follower:hover{
+	background: var(--light-color);
+	color: var(--dark-color);
 }
 
 .follower-detail {
-	margin-left: 20px;
+	margin-left: 2rem;
 	display: flex;
 	flex-direction: column;
+	color: inherit;
 }
 
 .follower-image {
 	height: 4.5rem;
 	border-radius: var(--border-radius);
 	border: 1px solid var(--dark-color);
+	background: var(--light-color);
 }
 
 @media (max-width: 768px) {

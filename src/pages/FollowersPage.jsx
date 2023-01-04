@@ -10,10 +10,6 @@ function Followers() {
     fetchFollowers();
   }, []);
 
-  useEffect(() => {
-    console.log({ followers });
-  }, [followers])
-
   const fetchFollowers = async () => {
     const numberOfFollowers = [5, 6, 7, 10]
 
