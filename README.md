@@ -6,8 +6,8 @@
 
   There are two ways to write these automated tests:
 
-    - Test after development (TAD): writing tests after the features are created.
-    - Test driven development (TDD): writing tests before writing the features.
+  - Test after development (TAD): writing tests after the features are created.
+  - Test driven development (TDD): writing tests before writing the features.
 
   ## Levels of Testing
 
