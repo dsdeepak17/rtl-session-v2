@@ -5,12 +5,14 @@
   Manual testing is typically done by the developers as they write code and QA teams also perform manual testing. But it's writing automated tests is an efficient way to test our applications so that bugs/issues are found faster at every deployment or while creating adding components.
 
   There are two ways to write these automated tests:
+
     - Test after development (TAD): writing tests after the features are created.
     - Test driven development (TDD): writing tests before writing the features.
 
   ## Levels of Testing
 
   There are generally three levels of testing:
+
   **Unit testing** involves testing individual units or components of a system in isolation from the rest of the system. It is typically done by the developers as they write code, and it helps to ensure that the individual units of the system are working correctly.
 
   **Integration testing** involves testing the interactions between different units or components of a system. It helps to ensure that the units of the system are working together correctly and that there are no conflicts between them.
@@ -37,13 +39,13 @@
 
   ## Setting Up Testing Environment on different BUILDS
 
-   - **CRA**:
-      CRA includes a set of scripts and configurations that make it easy to test your React components. You can just start writing tests.
+  - **CRA**:
+    CRA includes a set of scripts and configurations that make it easy to test your React components. You can just start writing tests.
 
-   - **Vite**:
-      Vite uses Vitest to test the applications by default, to reconfigure the build to test using jest you can follow steps given [here](https://codingwithmanny.medium.com/quick-jest-setup-with-vitejs-react-typescript-82f325e4323f).
+  - **Vite**:
+    Vite uses Vitest to test the applications by default, to reconfigure the build to test using jest you can follow steps given [here](https://codingwithmanny.medium.com/quick-jest-setup-with-vitejs-react-typescript-82f325e4323f).
 
-   - **Custom Build**:
-      To use the React Testing Library and Jest in a custom build setup for your React application, you will need to do install the RTL and Jest as dependencies and create configuration file for jest. Then we can start writing our test. To get help you can follow steps [here](https://dev.to/ivadyhabimana/setup-jest-and-react-testing-library-in-a-react-project-a-step-by-step-guide-1mf0). 
+  - **Custom Build**:
+    To use the React Testing Library and Jest in a custom build setup for your React application, you will need to do install the RTL and Jest as dependencies and create configuration file for jest. Then we can start writing our test. To get help you can follow steps [here](https://dev.to/ivadyhabimana/setup-jest-and-react-testing-library-in-a-react-project-a-step-by-step-guide-1mf0). 
 
 
