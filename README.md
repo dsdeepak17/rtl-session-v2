@@ -17,7 +17,7 @@
 
   **Integration testing** involves testing the interactions between different units or components of a system. It helps to ensure that the units of the system are working together correctly and that there are no conflicts between them.
 
-  **End To End testing** involves testing the entire system as a whole, including all of its components and their interactions. It is typically done after integration testing and helps to ensure that the system is working correctly in its entirety.
+  **End To End testing** involves testing the entire system as a whole, including all of its components and their interactions. It is typically done after integration testing and helps to ensure that the system is working correctly in its entirety. (libraries to be used - Cypress, Playright or Puppeteer)
 
 
   > We are going to Cover Unit Testing and Integration testing here using JEST and React Teating Library.
@@ -49,3 +49,8 @@
     To use the React Testing Library and Jest in a custom build setup for your React application, you will need to do install the RTL and Jest as dependencies and create configuration file for jest. Then we can start writing our test. To get help you can follow steps [here](https://dev.to/ivadyhabimana/setup-jest-and-react-testing-library-in-a-react-project-a-step-by-step-guide-1mf0). 
 
 
+## Running Tests
+
+> The CRA has scripts that run the tests in __test__ folder or with name Component.test.js
+> To run the test you could run following command in terminal:
+>   npm run test
